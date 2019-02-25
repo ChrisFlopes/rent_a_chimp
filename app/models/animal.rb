@@ -1,5 +1,5 @@
 class Animal < ApplicationRecord
-  belongs_to :user
+  belongs_to :owner, class_name: "User"
   has_many :bookings
   has_many :reviews, through: :bookings
 
