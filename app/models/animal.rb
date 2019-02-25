@@ -6,5 +6,5 @@ class Animal < ApplicationRecord
   validates :name, presence: true
   validates :species, presence: true, inclusion: {  in: %w[Chimp Dog Cat Camel],
                                                     message: "%{value} is not a valid species" }
-  valdiates :age, presence: true, numericality: { only_integer: true }
+  validates :age, presence: true, numericality: { only_integer: true }
 end
