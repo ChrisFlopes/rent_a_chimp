@@ -4,7 +4,7 @@ class CreateAnimals < ActiveRecord::Migration[5.2]
       t.string :species
       t.string :name
       t.integer :age
-      t.references :user, foreign_key: true
+      t.references :owner, index: true, foreign_key: { to_table: :users }
 
       t.timestamps
     end
