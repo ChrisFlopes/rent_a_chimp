@@ -1,11 +1,11 @@
-<h1>Animals#index</h1>
-<div class="cards">
+<div class="container">
+  <h1>Animals#index</h1>
+  <div class="cards">
   <% @animals.each do |animal| %>
-  <div class="card-category">
-      <%= link_to animal.name, animal %>
-      <%= animal.species %>
-      <%= animal.age %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h2><%= animal.name %></h2>
   </div>
   <% end %>
+  </div>
 </div>
 
