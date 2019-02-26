@@ -2,7 +2,7 @@
 <div class="cards">
   <% @animals.each do |animal| %>
   <div class="card-category">
-      <%= animal.name %>
+      <%= link_to animal.name, animal %>
       <%= animal.species %>
       <%= animal.age %>
   </div>
