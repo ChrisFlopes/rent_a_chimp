@@ -1,2 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container">
+
+  <div class="card-trip">
+    <div class="card-trip-infos">
+      <h2><%= @user.last_name %>, <%= @user.first_name %></h2>
+      <p><%= @user.email %></p>
+    </div>
+  </div>
+
+  <% Animal.all.each do |animal| %>
+    <% if animal.owner_id == @user.id %>
+      <%= link_to animal_path(animal) do %>
+        <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
