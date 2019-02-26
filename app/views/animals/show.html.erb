@@ -1,8 +1,14 @@
-<h1><%= @animal.name %></h1>
-<p><%= @animal.species %></p>
-<p><%= @animal.age %></p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+</div>
+
+<div class="container">
+  <h1><%= @animal.name %></h1>
+  <p><%= @animal.species %></p>
+  <p><%= @animal.age %></p>
+</div>
 
 
-
-
-<%= link_to "Animal List", animals_path %>
+<%= link_to "Rent #{@animal.name}", animals_path, class: "btn btn-flat" %>
+<%= link_to "< Back to all animals", animals_path, class: "btn btn-flat" %>
+<%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-flat" %>
+<%= link_to "Delete", animal_path(@animal), method: :delete, data: {confirm: "Are you sure you want to delete #{@animal.name}?" }, class: "btn btn-flat" %>
