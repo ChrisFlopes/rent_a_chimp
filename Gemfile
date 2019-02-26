@@ -17,6 +17,9 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 
+##### SEEDING GEM
+
+gem 'faker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
