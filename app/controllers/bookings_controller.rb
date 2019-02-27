@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_animal
+  before_action :set_user
+
   def new
     @booking = Booking.new
 
@@ -11,7 +13,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.animal = @animal
-    @booking.user = current.user
+    @booking.user = current_user
 
     if @booking.save
       redirect_to @booking
@@ -28,5 +30,9 @@ class BookingsController < ApplicationController
 
   def set_animal
     @animal = Animal.find(params[:animal_id])
+  end
+
+  def set_user
+    @user = current_user
   end
 end
