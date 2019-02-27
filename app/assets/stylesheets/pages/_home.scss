@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+.banner {
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(https://i.redd.it/4ix0hgqoomx11.png);
+  height: calc(100vh - 70px);
+
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
