@@ -35,6 +35,7 @@ puts 'Creating Animals...'
   animal.name = Faker::TvShows::Simpsons.character
   animal.age = rand(1..30)
   animal.owner = User.all.sample
+  animal.remote_photo_url = "https://c1.staticflickr.com/3/2616/4054759019_122957f28f_b.jpg"
   animal.save
 end
 
