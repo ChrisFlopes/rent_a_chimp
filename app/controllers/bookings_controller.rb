@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to @booking
+      redirect_to animals_path # change to users profile with list of bookings as soon as it exists
     else
       render :new
     end
