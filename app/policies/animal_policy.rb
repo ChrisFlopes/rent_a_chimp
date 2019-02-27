@@ -22,12 +22,11 @@ class AnimalPolicy < ApplicationPolicy
   end
 
   def update?
-    true
-    # record.user == user # || user.admin?
+    record.owner == user
   end
 
   def delete?
-    true
-    # record.user == user # || user.admin?
+    # true
+    record.owner == user # || user.admin?
   end
 end

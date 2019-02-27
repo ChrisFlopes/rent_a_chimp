@@ -12,7 +12,7 @@ class AnimalsController < ApplicationController
 
   def create
     @animal = Animal.new(animal_params)
-    @animal.owner = current_user
+    @animal.user = current_user
     authorize @animal
     if @animal.save
       redirect_to animal_path(@animal)
