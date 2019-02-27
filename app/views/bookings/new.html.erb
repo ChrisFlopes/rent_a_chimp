@@ -17,6 +17,6 @@
   <div>
     <p>End date <%= f.date_field :start_date, min: Date.today %></p>
   </div>
-  <%= f.submit "Book", class: "btn btn-flat" %>
+  <%= f.submit "Book", class: "btn btn-flat", data: {confirm: "You just booked #{@animal.name}?" } %>
   <% end %>
 </div>
