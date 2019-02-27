@@ -27,7 +27,7 @@ puts 'Creating Users...'
   user = User.new
   user.email = Faker::Internet.email
   user.first_name = Faker::Movies::LordOfTheRings.character
-  user.last_name = Faker::Movies::HrryPotter.spell
+  user.last_name = Faker::Movies::HarryPotter.spell
   user.password = '123456'
   user.save
 end
