@@ -29,7 +29,7 @@ puts 'Creating Users...'
 end
 
 puts 'Creating Animals...'
-5.times do |i|
+25.times do |i|
   animal = Animal.new
   animal.species = %w[Chimp Cat Dog Camel].sample
   animal.name = Faker::TvShows::Simpsons.character
