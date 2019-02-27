@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.animal = @animal
-    @booking.owner = current_user
+    @booking.user = current_user
 
     if @booking.save
       redirect_to animals_path # change to users profile with list of bookings as soon as it exists
