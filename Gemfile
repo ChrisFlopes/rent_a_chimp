@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -17,6 +18,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
 gem "pundit"
+gem 'dotenv-rails', groups: [:development, :test]
 
 ##### SEEDING GEM
 
