@@ -1,3 +1,50 @@
-<h1>Rent-A-Chimp</h1>
-<h2>Here is an image of our development team.</h2>
-<img src="https://i.redd.it/4ix0hgqoomx11.png" alt="">
+<div class="banner"">
+  <div class="container">
+    <h1 class="text-center">Rent A Chimp</h1>
+    <div class="banner-content col-md-12">
+      <div class="searchbar">
+        <div class="input-group">
+            <!-- Filter panner -->
+            <!-- <div class="input-group-btn search-panel">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span id="search_concept">Filter by</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#contains">Contains</a></li>
+                  <li><a href="#its_equal">It's equal</a></li>
+                  <li><a href="#greather_than">Greather than ></a></li>
+                  <li><a href="#less_than">Less than < </a></li>
+                  <li class="divider"></li>
+                  <li><a href="#all">Anything</a></li>
+                </ul>
+            </div> -->
+          <input type="hidden" name="search_param" value="all" id="search_param">
+          <input type="text" class="form-control" name="x" placeholder="Search term...">
+          <span class="input-group-btn">
+            <%= link_to root_path, class: "btn btn-default" do %>
+              <span class="glyphicon glyphicon-search"></span>
+              <% end %>
+          </span>
+
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>Animals#index</h1>
+<!--   <div class="cards">
+    <%# @animals.each do |animal| %>
+      <%#= link_to animal_path(animal) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <h2><%#= animal.name %></h2>
+        </div>
+      <%# end %>
+    <%# end %>
+  </div> -->
+</div>
+
+
+
