@@ -1,10 +1,5 @@
 class BookingsController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
+  before_action :set_animal
   def new
     @booking = Booking.new
 
@@ -16,6 +11,8 @@ class BookingsController < ApplicationController
     authorize @booking
 
     @booking.animal = @animal
+    @booking.user = current.user
+
     if @booking.save
       redirect_to @booking
     else
@@ -23,18 +20,13 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   private
 
   def booking_params
-    params.require(:review).permit(:animal_id, :user_id, :start_date, :end_date)
+    params.require(:booking).permit(:animal_id, :user_id, :start_date, :end_date)
+  end
+
+  def set_animal
+    @animal = Animal.find(params[:animal_id])
   end
 end
