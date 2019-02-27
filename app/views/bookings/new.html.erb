@@ -1,6 +1,15 @@
 <h1>Book <%= @animal.name %></h1>
 
 <div>
+  <% if @booking.errors.any? %>
+    <h3>ERROR</h3>
+    <ul>
+      <% @booking.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= simple_form_for [@animal, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
