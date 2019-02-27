@@ -2,15 +2,18 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animals = Animal.all
+    @animals = policy_scope(Animal).all
   end
 
   def new
     @animal = Animal.new
+    authorize @animal
   end
 
   def create
     @animal = Animal.new(animal_params)
+    @animal.owner = current_user
+    authorize @animal
     if @animal.save
       redirect_to animal_path(@animal)
     else
@@ -19,12 +22,15 @@ class AnimalsController < ApplicationController
   end
 
   def show
+    authorize @animal
   end
 
   def edit
+    authorize @animal
   end
 
   def update
+    authorize @animal
     if @animal.update(animal_params)
       redirect_to animal_path
     else
@@ -33,6 +39,7 @@ class AnimalsController < ApplicationController
   end
 
   def destroy
+    authorize @animal
     @animal.destroy
     redirect_to animals_path
   end
