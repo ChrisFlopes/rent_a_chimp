@@ -1,30 +1,53 @@
 <div class="container">
 
-  <div class="card-trip">
+<div class="card-trip">
     <div class="card-trip-infos">
-      <h2><%= @user.last_name %>, <%= @user.first_name %></h2>
+      <h2><%= @user.first_name %>'s Dashboard</h2>
       <p><%= @user.email %></p>
     </div>
   </div>
 
-  <div>
-    <% Animal.all.each do |animal| %>
-      <% if animal.owner_id == @user.id %>
-        <%= link_to animal_path(animal) do %>
-          <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
-        <% end %>
+  <h1>MY ANIMALS</h1>
+
+  <% Animal.all.each do |animal| %>
+    <% if animal.owner_id == @user.id %>
+      <%= link_to animal_path(animal) do %>
+        <div class="card-product">
+          <img src="<%= cl_image_path animal.photo %>">
+            <div class="card-product-infos">
+              <h2><%= animal.name %></h2>
+              <p><strong><%= animal.species %></strong></p>
+              <p><%= animal.age %></p>
+              <% if policy(animal).edit? %>
+                <%= link_to "Edit", edit_animal_path(animal) %>
+              <% end %>
+              <% if policy(animal).delete? %>
+              <%= link_to "Delete", animal_path(animal), method: :delete, data: {confirm: "Are you sure you want to delete #{animal.name}?" } %>
+              <% end %>
+            </div>
+        </div>
       <% end %>
     <% end %>
-  </div>
+  <% end %>
+
+  <h1>MY BOOKINGS</h1>
 
   <div>
     <% Booking.all.each do |booking| %>
       <% if booking.user_id == @user.id %>
-          <li><%= booking.animal.name %>, <%= booking.start_date %>, <%= booking.end_date %></li>
+      <div class="card-product">
+        <img src="<%= cl_image_path booking.animal.photo %>">
+        <div class="class card-product-infos">
+          <h2><%= booking.animal.name %></h2>
+          <p><%= booking.start_date %></p>
+          <p><%= booking.end_date %></p>
+           <%= link_to "Cancel", user_booking_path(current_user, booking),
+                method: :delete,
+                data: {confirm: 'Are you sure?'} %>
+          <% end %>
+        </div>
+      </div>
       <% end %>
-     <%= link_to "Delete", user_booking_path(current_user, booking),
-     method: :delete,
-     data: {confirm: 'Are you sure?'} %>
-    <% end %>
   </div>
 </div>
+
