@@ -1,17 +1,18 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @animal.photo  %>);">
-</div>
+<div class="container position-relative">
+  <div class="banner animal-border-radius animal-margin animal-box-shadow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @animal.photo  %>);">
+  </div>
 
 <%#= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %>
-
-<div class="container">
-  <h1>Name: <%= @animal.name %></h1>
+  <div class="animal-name">
+    <h1><%= @animal.name %></h1>
+  </div>
   <p>Animal: <%= @animal.species %></p>
   <p>Age: <%= @animal.age %></p>
-</div>
 
-<div class="container">
-  <%= link_to "< Back to all animals", animals_path, class: "btn btn-flat" %>
-  <%= link_to "Rent #{@animal.name}", new_animal_booking_path(@animal), class: "btn btn-flat" %>
+  <%= link_to animals_path, class: "btn animal-back-button" do %>
+    <i class="fas fa-chevron-left"></i> Back
+  <% end %>
+  <%= link_to "Book #{@animal.name}", new_animal_booking_path(@animal), class: "btn btn-flat animal-rent" %>
 
   <% if policy(@animal).edit? %>
     <%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-flat" %>
