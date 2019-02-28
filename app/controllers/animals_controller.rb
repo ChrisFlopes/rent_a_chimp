@@ -2,7 +2,13 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animals = policy_scope(Animal).all
+    @animals = policy_scope(Animal).where.not(latitude: nil, longitude: nil)
+    @markers = @animals.map do |animal|
+      {
+        lng: animal.longitude,
+        lat: animal.latitude
+      }
+    end
   end
 
   def new
