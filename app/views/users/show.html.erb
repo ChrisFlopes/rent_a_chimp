@@ -14,4 +14,13 @@
       <% end %>
     <% end %>
   <% end %>
-</div>
+
+
+  <% Booking.all.each do |booking| %>
+      <% if booking.user_id == @user.id %>
+        <%= link_to animal_path(animal) do %>
+          <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>

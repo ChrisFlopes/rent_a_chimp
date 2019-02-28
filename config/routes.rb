@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :animals do
     resources :bookings, only: [:new, :create]
   end
-  resources :users
+  resources :users do
+    resources :bookings, only: [:destroy, :update, :edit]
+  end
   resources :reviews
 end
