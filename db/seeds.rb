@@ -41,6 +41,7 @@ puts 'Creating Animals...'
   animal.owner = User.all.sample
   animal.remote_photo_url = IMAGES.sample
   animal.description = "#{animal.name} is a #{animal.species} that was born #{animal.age} years ago. #{animal.name} likes long walks on the beach and pina colada."
+  animal.address = Faker::Address.city
   animal.save
 end
 
