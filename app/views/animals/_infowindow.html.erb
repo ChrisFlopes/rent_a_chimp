@@ -1,3 +1,4 @@
 <img class="avatar-square" src="<%= cl_image_path animal.photo  %>">
 <h3><%= animal.name %></h3>
 <p><%= animal.address %></p>
+<%= link_to "show", animal_path(animal) %>
