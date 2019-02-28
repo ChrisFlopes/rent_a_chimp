@@ -37,3 +37,30 @@
   bottom: 100px;
   right: 35px;
 }
+
+
+.home-banner-positioning {
+  margin-top: 200px;
+}
+
+#banner-title{
+  font-size: 48px;
+}
+
+.text-white {
+  color: white;
+}
+
+.homepage-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 24px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#homepage-scrolldown-text{
+  color: black;
+  text-align: center;
+}
