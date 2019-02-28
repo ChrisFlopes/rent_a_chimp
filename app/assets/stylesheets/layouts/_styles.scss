@@ -64,3 +64,13 @@
   color: black;
   text-align: center;
 }
+
+.index-animal-card{
+  transition: all .2s ease-in-out;
+  border-radius: 3px;
+  color: black + 100;
+  &:hover {
+    transform: scale(1.05);
+    color: black;
+  }
+}
