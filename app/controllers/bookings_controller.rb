@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_animal
+  before_action :set_animal, except: :destroy
   before_action :set_user
 
   def new
@@ -20,6 +20,13 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to user_path(current_user)
   end
 
   private

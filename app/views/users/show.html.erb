@@ -19,10 +19,12 @@
 
   <div>
     <% Booking.all.each do |booking| %>
-        <% if booking.user_id == @user.id %>
-            <li><%= booking.animal.name %></li>
-              <li><%= booking.start_date %>, <%= booking.end_date %></li>
-        <% end %>
+      <% if booking.user_id == @user.id %>
+          <li><%= booking.animal.name %>, <%= booking.start_date %>, <%= booking.end_date %></li>
       <% end %>
-    </div>
+     <%= link_to "Delete", user_booking_path(current_user, booking),
+     method: :delete,
+     data: {confirm: 'Are you sure?'} %>
+    <% end %>
   </div>
+</div>
