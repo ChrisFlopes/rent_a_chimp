@@ -7,20 +7,22 @@
     </div>
   </div>
 
-  <% Animal.all.each do |animal| %>
-    <% if animal.owner_id == @user.id %>
-      <%= link_to animal_path(animal) do %>
-        <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
-      <% end %>
-    <% end %>
-  <% end %>
-
-
-  <% Booking.all.each do |booking| %>
-      <% if booking.user_id == @user.id %>
+  <div>
+    <% Animal.all.each do |animal| %>
+      <% if animal.owner_id == @user.id %>
         <%= link_to animal_path(animal) do %>
           <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
         <% end %>
       <% end %>
     <% end %>
+  </div>
+
+  <div>
+    <% Booking.all.each do |booking| %>
+        <% if booking.user_id == @user.id %>
+            <li><%= booking.animal.name %></li>
+              <li><%= booking.start_date %>, <%= booking.end_date %></li>
+        <% end %>
+      <% end %>
+    </div>
   </div>
