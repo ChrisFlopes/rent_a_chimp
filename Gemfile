@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -21,6 +20,8 @@ gem "pundit"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
+# Geo Coder
+gem 'geocoder'
 
 ##### SEEDING GEM
 

@@ -9,4 +9,7 @@ class Animal < ApplicationRecord
   validates :species, presence: true, inclusion: {  in: %w[Chimp Dog Cat Camel],
                                                     message: "%{value} is not a valid species" }
   validates :age, presence: true, numericality: { only_integer: true }
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

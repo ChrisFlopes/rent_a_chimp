@@ -2,7 +2,15 @@ class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
 
   def index
-    @animals = policy_scope(Animal).all
+    @animals = policy_scope(Animal).where.not(latitude: nil, longitude: nil)
+    @markers = @animals.map do |animal|
+      {
+        lng: animal.longitude,
+        lat: animal.latitude,
+        # infoWindow: render_to_string(partial: "infowindow", locals: {animal: animal})
+        # image_url: helpers.asset_url('logo.jpg')
+      }
+    end
   end
 
   def new

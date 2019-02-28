@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 2019_02_28_120209) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.text "description"
     t.index ["owner_id"], name: "index_animals_on_owner_id"
   end
