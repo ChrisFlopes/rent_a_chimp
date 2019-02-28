@@ -7,7 +7,7 @@ class AnimalsController < ApplicationController
       {
         lng: animal.longitude,
         lat: animal.latitude,
-        # infoWindow: render_to_string(partial: "infowindow", locals: {animal: animal})
+        infoWindow: render_to_string(partial: "infowindow", locals: {animal: animal})
         # image_url: helpers.asset_url('logo.jpg')
       }
     end
