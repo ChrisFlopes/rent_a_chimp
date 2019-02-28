@@ -3,6 +3,18 @@ class AnimalsController < ApplicationController
 
   def index
     @animals = policy_scope(Animal).where.not(latitude: nil, longitude: nil)
+
+    if params[:query].present?
+      sql_query = " \
+        animals.species @@ :query \
+        OR animals.address @@ :query \
+      "
+      @animals = Animal.where(sql_query, query: "%#{params[:query]}%")
+
+    else
+      @animals = Animal.all
+    end
+
     @markers = @animals.map do |animal|
       {
         lng: animal.longitude,
