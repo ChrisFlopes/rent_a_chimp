@@ -7,11 +7,24 @@
     </div>
   </div>
 
-  <% Animal.all.each do |animal| %>
-    <% if animal.owner_id == @user.id %>
-      <%= link_to animal_path(animal) do %>
-        <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
+  <div>
+    <% Animal.all.each do |animal| %>
+      <% if animal.owner_id == @user.id %>
+        <%= link_to animal_path(animal) do %>
+          <li><%= animal.species %>, <%= animal.name %> (<%= animal.age %>)</li>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
+
+  <div>
+    <% Booking.all.each do |booking| %>
+      <% if booking.user_id == @user.id %>
+          <li><%= booking.animal.name %>, <%= booking.start_date %>, <%= booking.end_date %></li>
+      <% end %>
+     <%= link_to "Delete", user_booking_path(current_user, booking),
+     method: :delete,
+     data: {confirm: 'Are you sure?'} %>
+    <% end %>
+  </div>
 </div>
