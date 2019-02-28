@@ -1,0 +1,39 @@
+.animal-border-radius {
+  border-radius: 5px;
+}
+
+.animal-box-shadow {
+  box-shadow: 0px 0px 4px black;
+}
+
+.animal-margin {
+  margin-top: 20px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.animal-back-button {
+  color: white - 50;
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  &:hover {
+    color: white;
+  }
+}
+
+.animal-name {
+  position: absolute;
+  bottom: 100px;
+  left: 35px;
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+
+.animal-rent {
+  position: absolute;
+  bottom: 100px;
+  right: 35px;
+}
