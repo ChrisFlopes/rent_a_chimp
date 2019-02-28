@@ -1,34 +1,80 @@
 <div class="banner"">
   <div class="container">
-    <h1 class="text-center">Rent A Chimp</h1>
-    <div class="banner-content col-md-12">
-      <div class="searchbar">
-        <div class="input-group">
-            <!-- Filter panner -->
-            <!-- <div class="input-group-btn search-panel">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                  <span id="search_concept">Filter by</span> <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#contains">Contains</a></li>
-                  <li><a href="#its_equal">It's equal</a></li>
-                  <li><a href="#greather_than">Greather than ></a></li>
-                  <li><a href="#less_than">Less than < </a></li>
-                  <li class="divider"></li>
-                  <li><a href="#all">Anything</a></li>
-                </ul>
-            </div> -->
-          <input type="hidden" name="search_param" value="all" id="search_param">
-          <input type="text" class="form-control" name="x" placeholder="Search term...">
-          <span class="input-group-btn">
-            <%= link_to root_path, class: "btn btn-default" do %>
-              <span class="glyphicon glyphicon-search"></span>
-              <% end %>
-          </span>
+    <div class="row">
+      <h1 class="text-center" id="banner-title">Rent A Chimp</h1>
+      <div class="banner-content home-banner-positioning col-md-12">
+        <h3 class="text-center text-white">Booking Animals with no monkey business</h3>
+        <div class="searchbar">
+          <div class="input-group">
+              <!-- Filter panner -->
+              <!-- <div class="input-group-btn search-panel">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span id="search_concept">Filter by</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#contains">Contains</a></li>
+                    <li><a href="#its_equal">It's equal</a></li>
+                    <li><a href="#greather_than">Greather than ></a></li>
+                    <li><a href="#less_than">Less than < </a></li>
+                    <li class="divider"></li>
+                    <li><a href="#all">Anything</a></li>
+                  </ul>
+              </div> -->
+            <input type="hidden" name="search_param" value="all" id="search_param">
+            <input type="text" class="form-control" name="x" placeholder="Search term...">
+            <span class="input-group-btn">
+              <%= link_to root_path, class: "btn btn-default" do %>
+                <span class="glyphicon glyphicon-search"></span>
+                <% end %>
+            </span>
 
+          </div>
         </div>
+      </div>
     </div>
   </div>
-  </div>
 </div>
+  <div class="container">
+    <div class="row">
+      <h2 id="homepage-scrolldown-text">Find Partners</h2>
+      <div class="homepage-cards">
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <div class="card-trip-infos">
+            <div>
+              <h2>Dog's</h2>
+              <p>Man's Best friend</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <div class="card-trip-infos">
+            <div>
+              <h2>Chimp's</h2>
+              <p>Man's Closest Relative</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <div class="card-trip-infos">
+            <div>
+              <h2>Cat's</h2>
+              <p>Man's Cuddle Buddy</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <div class="card-trip-infos">
+            <div>
+              <h2>Camel's</h2>
+              <p>Man's Desert Companion</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
