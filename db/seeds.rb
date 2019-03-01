@@ -62,7 +62,7 @@ puts 'Creating Cats...'
 end
 
 IMAGES_CAMELS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551440004/Camel/cal-engel-531472-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551440003/Camel/briana-tozour-759206-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439999/Camel/kristian-egelund-707664-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439997/Camel/roxanne-desgagnes-287104-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439987/Camel/shefali-sinha-423701-unsplash.jpg"]
-ADRESSES_CAMELS =["Marvila,  Lisbon", "Beato, Lisbon", "Braço de Prata, Lisbon", "Teresinhas, Lisbon", "São João de Brito, Lisbon"]
+ADRESSES_CAMELS =["Marvila,  Lisbon", "Beato, Lisbon", "Braço de Prata, Lisbon", "Marvila, Lisbon", "São João de Brito, Lisbon"]
 puts 'Creating Camels...'
 4.times do |i|
   animal = Animal.new
