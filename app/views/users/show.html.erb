@@ -35,8 +35,6 @@
     </div>
 
   <h3>Your Bookings</h3>
-
-  <div class="container"></div>
     <% Booking.all.each do |booking| %>
       <% if booking.user_id == @user.id %>
       <div class="card-animal">
@@ -57,4 +55,3 @@
       <% end %>
   </div>
   <div class="spacing"></div>  <div class="spacing"></div>  <div class="spacing"></div>
-</div>
