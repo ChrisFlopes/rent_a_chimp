@@ -43,6 +43,7 @@ class AnimalsController < ApplicationController
 
   def show
     authorize @animal
+    @review = Review.new
   end
 
   def edit
