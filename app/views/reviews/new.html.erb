@@ -3,5 +3,6 @@
 
 <%= simple_form_for([current_user, @booking, @review]) do |form| %>
   <%= form.input :content, as: :text %>
+  <%= form.input :rating, :collection => [1, 2, 3, 4, 5] %>
   <%= form.button :submit %>
 <% end %>
