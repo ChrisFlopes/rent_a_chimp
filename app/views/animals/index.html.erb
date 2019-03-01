@@ -25,10 +25,9 @@
           <img src="<%= cl_image_path animal.photo  %>">
           <div class="card-trip-infos">
             <div>
-              <h2><%= animal.name %></h2>
-              <p> <%= animal.species %></p>
+              <h4><%= animal.name %></h4>
+              <p> <%= animal.species %> | <%= animal.age %> yrs</p>
             </div>
-            <h2 class="card-trip-pricing"><%= animal.age %> yrs</h2>
           </div>
         </div>
       <% end %>
