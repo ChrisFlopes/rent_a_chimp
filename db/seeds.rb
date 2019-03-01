@@ -49,7 +49,7 @@ end
 IMAGES_CATS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/v1551444456/Cats/anton-darius-thesollers-590562-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439635/Cats/halanna-halila-557324-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439627/Cats/dan-wayman-1298943-unsplash.jpg", "http://res.cloudinary.com/ddwfkdfyx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1551439611/Cats/max-baskakov-1318019-unsplash.jpg"]
 ADRESSES_CATS =["Marquês de Pombal,  Lisbon", "Bairro Alto, Lisbon", "Alfama, Lisbon", "Chiado, Lisbon", "Cais do Sodre, Lisbon"]
 puts 'Creating Cats...'
-5.times do |i|
+4.times do |i|
   animal = Animal.new
   animal.species = "Cat"
   animal.name = Faker::Creature::Cat.name
@@ -64,7 +64,7 @@ end
 IMAGES_CAMELS = ["https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551440004/Camel/cal-engel-531472-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551440003/Camel/briana-tozour-759206-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439999/Camel/kristian-egelund-707664-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439997/Camel/roxanne-desgagnes-287104-unsplash.jpg", "https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439987/Camel/shefali-sinha-423701-unsplash.jpg"]
 ADRESSES_CAMELS =["Marvila,  Lisbon", "Beato, Lisbon", "Braço de Prata, Lisbon", "Teresinhas, Lisbon", "São João de Brito, Lisbon"]
 puts 'Creating Camels...'
-5.times do |i|
+4.times do |i|
   animal = Animal.new
   animal.species = "Camel"
   animal.name = Faker::FunnyName.name
