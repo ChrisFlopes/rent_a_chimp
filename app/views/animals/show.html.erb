@@ -1,4 +1,5 @@
 <div class="container position-relative">
+  <div class="card-trip col-md-10  col-md-offset-1">
   <div class="banner animal-border-radius animal-margin animal-box-shadow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @animal.photo  %>);">
   </div>
 
@@ -7,8 +8,16 @@
     <h1><%= @animal.name %></h1>
   </div>
 
-  <p>Animal: <%= @animal.species %></p>
-  <p>Age: <%= @animal.age %></p>
+
+  <div class="card-trip-infos">
+    <div>
+      <p>Animal: <%= @animal.species %></p>
+      <h5 ><%= @animal.description %></h5>
+    </div>
+    <h2 class="card-trip-pricing">Age: <%= @animal.age %></h2>
+    </div>
+
+
 
   <%= link_to animals_path, class: "btn animal-back-button" do %>
     <i class="fas fa-chevron-left"></i> Back
@@ -25,7 +34,24 @@
   <% if policy(@animal).delete? %>
     <%= link_to "Delete", animal_path(@animal), method: :delete, data: {confirm: "Are you sure you want to delete #{@animal.name}?" }, class: "btn btn-flat" %>
   <% end %>
+  </div>
 </div>
+
+
+<!-- <div class="container">
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title here</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+  </div>
+</div>
+ </div>
+ -->
 
 <%= render 'bookings/new', animal: @animal, booking: @booking %>
 
