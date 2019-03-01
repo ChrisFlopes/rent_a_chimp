@@ -3,7 +3,7 @@
 }
 
 .animal-box-shadow {
-  box-shadow: 0px 0px 4px black;
+  box-shadow: 0px 0px 4px rgba(200,200,200,0.8);
 }
 
 .animal-margin {
@@ -74,3 +74,108 @@
     color: black;
   }
 }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 280px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgba(200,200,200,0.8);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.card-animal {
+  position: relative;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
+  // opacity: 0; // REMOVE THIS
+}
+
+.card-animal img {
+  height: 120px;
+  width: 20%;
+  object-fit: cover;
+}
+
+.card-animal h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+  position: absolute;
+  top: 20%;
+  left: 22%;
+}
+
+.card-animal p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  color: black;
+  position: absolute;
+  top: 36%;
+  left: 22%;
+}
+
+.card-animal h4 {
+  font-size: 12px;
+  line-height: 1.4;
+  color: black;
+}
+
+.show-edit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.show-delete {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.text-wrap {
+  width: 50%;
+  height: 54%;
+  word-wrap: normal;
+  position: absolute;
+  top: 40%;
+  left: 22%;
+}
+
+#secret-hidden {
+  position: absolute;
+  z-index: -1;
+}
+
+.animals-cards {
+  background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
