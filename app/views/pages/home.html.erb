@@ -1,11 +1,11 @@
-<div class="banner"">
+<div class="banner">
   <div class="container">
     <div class="row">
       <h1 class="text-center" id="banner-title">Rent A Chimp</h1>
+      <h3 class="text-center text-white">Booking Animals with no monkey business</h3>
       <div class="banner-content home-banner-positioning col-md-12">
-        <h3 class="text-center text-white">Booking Animals with no monkey business</h3>
         <div class="searchbar">
-          <div class="input-group form-control">
+          <div class="input-group form-control no-padding">
             <%= form_tag animals_path, method: :get do %>
               <%= text_field_tag :query,
                 params[:query],
@@ -18,47 +18,67 @@
     </div>
   </div>
 </div>
+<div class="spacing">
+
+</div>
   <div class="container">
     <div class="row">
       <h2 id="homepage-scrolldown-text">Find Partners</h2>
       <div class="homepage-cards">
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-          <div class="card-trip-infos">
-            <div>
-              <h2>Dog's</h2>
-              <p>Man's Best friend</p>
+        <a href="https://rent-a-chimp.herokuapp.com/animals?utf8=✓&query=dog">
+          <div class="card-trip index-animal-card">
+            <img src="https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439768/Dogs/tamara-bellis-267349-unsplash.jpg">
+            <div class="card-trip-infos">
+              <div>
+                <h2>Dog's</h2>
+                <p>Man's Best friend</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-          <div class="card-trip-infos">
-            <div>
-              <h2>Chimp's</h2>
-              <p>Man's Closest Relative</p>
+        </a>
+        <a href="https://rent-a-chimp.herokuapp.com/animals?utf8=%E2%9C%93&query=chimp">
+          <div class="card-trip index-animal-card">
+            <img src="https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439929/Chimps/francesco-ungaro-738063-unsplash.jpg">
+            <div class="card-trip-infos">
+              <div>
+                <h2>Chimp's</h2>
+                <p>Man's Closest Relative</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-          <div class="card-trip-infos">
-            <div>
-              <h2>Cat's</h2>
-              <p>Man's Cuddle Buddy</p>
+        </a>
+        <a href="https://rent-a-chimp.herokuapp.com/animals?utf8=%E2%9C%93&query=cat">
+          <div class="card-trip index-animal-card">
+            <img src="https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551439643/Cats/lily-banse-348257-unsplash.jpg">
+            <div class="card-trip-infos">
+              <div>
+                <h2>Cat's</h2>
+                <p>Man's Cuddle Buddy</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card-trip">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-          <div class="card-trip-infos">
-            <div>
-              <h2>Camel's</h2>
-              <p>Man's Desert Companion</p>
+        </a>
+        <a href="https://rent-a-chimp.herokuapp.com/animals?utf8=✓&query=camel">
+          <div class="card-trip index-animal-card">
+            <img src="https://res.cloudinary.com/ddwfkdfyx/image/upload/v1551440004/Camel/cal-engel-531472-unsplash.jpg">
+            <div class="card-trip-infos">
+              <div>
+                <h2>Camel's</h2>
+                <p>Man's Desert Companion</p>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
+  <div class="spacing"></div>
+  <div class="spacing"></div>
 
+  <div class="experience">
+    <%= image_tag "chimp-face-of-brazil.png", height: 50 %>
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, impedit iusto. Obcaecati vitae quas reprehenderit necessitatibus totam minima perspiciatis eligendi, animi, perferendis. Enim dolorum, tenetur tempore aliquam quia ullam repellat?</h3>
+  </div>
+
+  <div class="spacing"></div>
+  <div class="spacing"></div>

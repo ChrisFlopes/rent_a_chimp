@@ -62,7 +62,9 @@
 
 #homepage-scrolldown-text {
   color: black;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .index-animal-card {
@@ -159,11 +161,17 @@
   background-color: #f4f4f4;
 }
 
+.no-padding {
+  padding: 0px;
+}
 
+.spacing {
+  height: 50px;
+}
 
-
-
-
+.experience {
+  text-align: center;
+}
 
 
 
