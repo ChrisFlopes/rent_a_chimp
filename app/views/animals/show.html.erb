@@ -13,7 +13,10 @@
   <%= link_to animals_path, class: "btn animal-back-button" do %>
     <i class="fas fa-chevron-left"></i> Back
   <% end %>
-  <%= link_to "Book #{@animal.name}", new_animal_booking_path(@animal), class: "btn btn-flat animal-rent" %>
+  <%= link_to "Book #{@animal.name}", new_animal_booking_path(@animal),
+              class: "btn btn-flat animal-rent",
+              "data-toggle" => "modal",
+              "data-target" => "#modalBooking" %>
 
   <% if policy(@animal).edit? %>
     <%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-flat" %>
@@ -23,3 +26,7 @@
     <%= link_to "Delete", animal_path(@animal), method: :delete, data: {confirm: "Are you sure you want to delete #{@animal.name}?" }, class: "btn btn-flat" %>
   <% end %>
 </div>
+
+<%= render 'bookings/new', animal: @animal, booking: @booking %>
+
+
