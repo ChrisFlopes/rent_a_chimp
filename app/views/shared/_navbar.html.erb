@@ -10,9 +10,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Home", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Add Animal", new_animal_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Rent", animals_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "List all Animals", animals_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
