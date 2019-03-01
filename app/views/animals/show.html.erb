@@ -1,20 +1,27 @@
 <div class="container position-relative">
-  <div class="card-trip col-md-10  col-md-offset-1">
-  <div class="banner animal-border-radius animal-margin animal-box-shadow" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @animal.photo  %>);">
+  <div class="card-trip col-md-8  col-md-offset-2">
+  <div class="banner animal-border-radius animal-margin animal-box-shadow banner-image" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @animal.photo  %>);">
   </div>
 
+
 <%#= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %>
-  <div class="animal-name">
-    <h1><%= @animal.name %></h1>
-  </div>
+
+      <div class="animal-name">
+       <!--  <h1><%= @animal.name %></h1> -->
+      </div>
 
 
   <div class="card-trip-infos">
-    <div>
-      <p>Animal: <%= @animal.species %></p>
+    <div class="description">
+       <h1><%= @animal.name %></h1>
+      <span><h2><%= @animal.species %> | <%= @animal.age %> years</h2></span>
+
       <h5 ><%= @animal.description %></h5>
     </div>
-    <h2 class="card-trip-pricing">Age: <%= @animal.age %></h2>
+    <div class="pricing">
+
+    </div>
+
     </div>
 
 
